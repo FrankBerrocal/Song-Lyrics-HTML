@@ -1,0 +1,661 @@
+/*
+Assigment 3
+Web Fundamentals
+Frank Berrocal
+Bow Valley College*/
+
+
+/*
+indiation of font for all html*/
+
+html {
+  font-family: Helvetica, sans-serif;
+}
+
+
+/*
+specifications for body only*/
+
+body
+{
+  margin: 2%;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+
+/*
+Yellow header. Provide font type, size, weight, alignment, color*/
+
+header > h1{
+  font-family: Arial;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-weight: 600;
+  color:  rgb(88, 88, 88);
+  height: 1%;
+  background-color:  rgb(255,255,0);
+  padding: 2%;
+  margin: 0%;
+}
+
+/*
+Grey header, color descripcion and padding*/
+header > nav{
+  background-color:  rgb(70, 70, 70);
+  margin: 0%;
+  height: 0%;
+  padding: 1%;
+}
+
+/*
+To the list, assign a grid, name the grid fields, eliminate lines from links, align content */
+
+header > nav > ul
+{
+  margin: 1%;
+  height: 0%;
+  display: grid;
+  grid-template-columns: 35% 10% 10% 10% auto;
+  grid-template-areas: 'empty1 area1 area2 area3 empty2';
+  grid-template-rows: auto;
+  align-content: center;
+  list-style-type: none;
+  text-decoration-line: none;
+}
+
+/*
+Indicate font type for the elements in the list, color and padding */
+header > nav > ul > li{
+  font-family: verdana bold, sans-serif;
+  font-size: 12px;
+  background-color:  rgb(70, 70, 70);
+  margin: 0%;
+  height: 0%;
+  padding: 3%;
+  line-height: 0%;
+  
+}
+
+/*
+Assign the list elements to the areas in the grid. */
+header > nav > ul > li:nth-of-type(1){
+  grid-area: area1;
+}
+
+header > nav > ul > li:nth-of-type(2){
+  grid-area: area2;
+}
+
+header > nav > ul > li:nth-of-type(3){
+  grid-area: area3;
+}
+
+/*
+Assign color to list elements in the grid. */
+header > nav > ul > li > a{
+  color:  rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+
+/*. Main Header element. */
+
+
+/*. Create a grid for the header, include a background image, align the image, provide size, padding and margin to duplicate the prime reference.  In order for z-index  to work, elements should be hierachically placed */
+main > header {
+  z-index: 0;
+  position: relative;
+  background-repeat: no-repeat;
+  background-image: url(images/talking_heads-speaking_in_tongues.png);
+  background-size:100%;
+  background-position: center;
+  height: 15%;
+
+}
+main > header > section {
+  border-bottom-width: 20%;
+  border-bottom-color: black;
+}
+/* Insert black rectangle image to header.  */
+main > header > section {
+  
+  background-image: url(images/blackBox.jpg);
+  opacity: 0.85;
+  background-size:90%;
+  background-position: center;
+  float: center;
+  width: 84%;
+  padding-bottom:20px;
+  margin-bottom: 2%;
+  margin-left: 8%;
+  height: 50%;
+}
+
+main > header > section {
+  display: grid;
+  grid-template-columns: 10% 65% auto;
+  grid-template-rows: 30% 10% auto;
+  grid-template-areas: 'a1 a2 a3 b1 b2 b3 c1 c2 c3';
+  align-content: center;
+
+}
+
+
+
+/*. Provide format to h1 by reference the first element h1 in the header - section. All elements within section are conditioned by the z-index of the parent */
+header > section:first-of-type h1{
+  z-index: 3;
+  position:relative;
+  font-family: 'helvetica';
+  font-size: 200%;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  height: 40%;
+  width: 100%;
+  color:  rgba(255,255,0,1);
+  align-content:unset;
+  grid-area: 1 / 2;
+  vertical-align: text-bottom;
+  margin-top: 7%;
+  opacity: 1;
+  
+
+
+}
+
+/*. Provide format to h2 by reference the first element h2 in the header - section  */
+header > section:first-of-type h2{
+  z-index: 3;
+  position:relative;
+  font-family: 'Arial Narrow';
+  font-size: 170%;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  height: 20%;
+  width: 100%;
+  color:  rgba(255,255,255,1);
+  grid-area: 2 / 2 / test;
+  vertical-align: text-top;
+  margin-top: 3%;
+  opacity: 1;
+}
+
+
+
+/*. Provide format to h3 by reference the first element h3 in the header - section  */
+header > section:first-of-type h3{
+  z-index: 3;
+  position:relative;
+  font-family: 'Arial Narrow';
+  font-size: 15px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  height: 40%;
+  width: 100%;
+  color:  rgba(220, 220, 220,1);
+  vertical-align: text-top;
+  grid-area: 3 / 2;
+  margin-top: 5%;
+  padding-top: 1%;
+  opacity: 1;
+}
+
+/*. Provide format to img by reference the first element img in the header - section  */
+header > :first-of-type img{
+  z-index: 3;
+  position: relative;
+  height: 90%;
+  width: 65%;
+  align-content: center;
+  grid-area: 1 / 3 / 4;
+  margin: 0%;
+  padding-right:30%;
+  padding-top:8%;
+
+
+}
+
+
+/*. Color and format to aside section  */
+aside {
+  color: black;
+  float: right;
+  margin: 2%;
+  padding: 0%;
+  width: 30%;
+  background-color:  rgb(70, 70, 70);
+}
+/*. Color and format to aside parragraphs */
+aside > p{
+  font-size: 11px;
+  font-weight: 500;
+  padding: 5%;
+  color:white;
+  line-height: 170%;
+  letter-spacing: 0.5px;
+  margin-bottom: 2%;
+}
+/*. Color and format to aside blockquote */
+aside > blockquote{
+  font-size: 11px;
+  font-weight: 600;
+  color:white;
+  line-height: 130%;
+  letter-spacing: 0.5px;
+}
+/*. Color to index link */
+article > aside > blockquote > sup >a{
+  color:yellow;
+}
+
+/*. Color and format to H2 with yellow square */
+aside > h2 {
+  font-family: 'Arial Narrow';
+  font-size: 13px;
+  color: rgb(70, 70, 70);
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color:  rgb(255,255,0);
+  padding: 10%;
+  margin: 0%;
+}
+
+/*. Color and format to iframe */
+aside > section > iframe{
+  margin: 5%;
+  width: 90%;
+  height: 70%;
+  border-top-width: 3px;
+  padding-top: 10px;
+  border-top-color:rgba(255,255,255,1);
+  
+}
+
+/*Article, all the song verses*/
+
+/*separation from header*/
+article{
+  margin-top: 3%;
+}
+
+/*Format to all odd parragraphs*/
+article > section:nth-of-type(1n) {
+  color: rgb(70, 70, 70);
+  font-weight: 400;
+  margin-left: 8%;
+  line-height: 1.5;
+  padding-bottom: 3%;
+  letter-spacing: 2px;
+  padding:0%;
+
+  
+
+}
+
+/*Format to all even parragraphs with a tabular addition to separate from margin*/
+article > section:nth-of-type(2n) {
+  color: rgb(70, 70, 70);
+  font-weight: 400;
+  margin-left: 10%;
+  line-height: 1.5;
+  border-left-color: rgb(255,255,0);
+  padding-bottom: 3%;
+  letter-spacing: 2px;
+
+}
+
+/*Format to all even h2 titles*/
+article > section:nth-of-type(1n) > h2 {
+  color: rgb(70, 70, 70);
+  display: inline; /* the default for span */
+  padding: 10px;
+  background-color: yellow; 
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+}
+
+/*Format to all odd h2 titles*/
+article > section:nth-of-type(2n) > h2 {
+  color: rgb(70, 70, 70);
+  display: inline; /* the default for span */
+  padding: 10px;
+  background-color: yellow; 
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  
+
+}
+
+/*Creation of yellow line to all verses, as complete border with all the rest of sides in white.*/
+main > article > section > p{
+
+  border: 5px solid white;
+  border-left-width: 3px;
+  padding-left: 10px;
+  border-left-color:rgba(255,255,0,1);
+  padding-top: 2%;
+  margin-top:0%;
+  padding-bottom: 1%;
+}
+
+/*Footer font color.*/
+footer:first-of-type cite{
+  color: black;
+}
+
+/*Footer line.*/
+main > article > footer > section {
+  font-size: 10px;
+  font-weight: 100;
+  border: 5px solid white;
+  border-top-width: 3px;
+  padding-top: 15px;
+  border-top-color:rgba(255,255,0,1);
+}
+
+/* Format for link in cite, boxed in yellow color.*/
+main > article > footer > section > cite > a{
+  color: black;
+  font-family: Arial;
+  font-size:9px;
+  display: inline;
+  padding: 2px;
+  background-color: yellow; 
+  text-decoration: none;
+}
+
+/*Corrections for resizing*/
+
+@media screen and (max-width:1100px)
+{
+    
+  header > nav > ul
+  {
+    margin: 1%;
+    height: 0%;
+    display: grid;
+    grid-template-columns: 35% 8% 10% 10% auto;
+    grid-template-areas: 'empty1 area1 area2 area3 empty2';
+    grid-template-rows: auto;
+    align-content: center;
+    list-style-type: none;
+    text-decoration-line: none;
+  }
+
+  
+}
+
+@media screen and (max-width:1000px)
+{
+    
+  header > nav > ul
+  {
+    margin: 1%;
+    height: 0%;
+    display: grid;
+    grid-template-columns: 35% 7% 11% 10% auto;
+    grid-template-areas: 'empty1 area1 area2 area3 empty2';
+    grid-template-rows: auto;
+    align-content: center;
+    list-style-type: none;
+    text-decoration-line: none;
+  }
+
+}
+
+@media screen and (max-width:900px)
+{
+    
+  header > nav > ul
+  {
+    margin: 1%;
+    height: 0%;
+    display: grid;
+    grid-template-columns: 32% 8% 12% 10% auto;
+    grid-template-areas: 'empty1 area1 area2 area3 empty2';
+    grid-template-rows: auto;
+    align-content: center;
+    list-style-type: none;
+    text-decoration-line: none;
+  }
+    header > section:first-of-type h1{
+  font-family: 'helvetica';
+  font-size: 150%;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  height: 40%;
+  width: 100%;
+  color:  rgba(255,255,0,1);
+  align-content:unset;
+  grid-area: 1 / 2;
+  vertical-align: text-bottom;
+  margin-top: 7%;
+  }
+  /*. Provide format to h2 by reference the first element h2 in the header - section  */
+header > section:first-of-type h2{
+  font-family: 'Arial Narrow';
+  font-size: 130%;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  height: 20%;
+  width: 100%;
+  color:  rgba(255,255,255,1);
+  grid-area: 2 / 2;
+  vertical-align: text-top;
+  margin-top: 1.5%;
+}
+
+/*. Provide format to h3 by reference the first element h3 in the header - section  */
+header > section:first-of-type h3{
+  font-family: 'Arial Narrow';
+  font-size: 120%;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  height: 40%;
+  width: 100%;
+  color:  rgba(220, 220, 220,1);
+  vertical-align: text-top;
+  grid-area: 3 / 2;
+  margin-top: 3%;
+  padding-top: 1%;
+  }
+}
+
+@media screen and (max-width:700px)
+{
+    
+  header > nav > ul
+  {
+    margin: 1%;
+    height: 0%;
+    display: grid;
+    grid-template-columns: 27% 10% 15% 15% auto;
+    grid-template-areas: 'empty1 area1 area2 area3 empty2';
+    grid-template-rows: auto;
+    align-content: center;
+    list-style-type: none;
+    text-decoration-line: none;
+    letter-spacing: 1px;
+  }
+     
+}
+
+@media screen and (max-width:650px)
+{
+    
+  header > nav > ul
+  {
+    margin: 1%;
+    height: 0%;
+    display: grid;
+    grid-template-columns: 24% 12% 20% 15% auto;
+    grid-template-areas: 'empty1 area1 area2 area3 empty2';
+    grid-template-rows: auto;
+    align-content: center;
+    list-style-type: none;
+    text-decoration-line: none;
+    letter-spacing: 1px;
+  }
+  header > section:first-of-type h1{
+  font-family: 'helvetica';
+  font-size: 100%;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  height: 40%;
+  width: 100%;
+  color:  rgba(255,255,0,1);
+  align-content:unset;
+  grid-area: 1 / 2;
+  vertical-align: text-bottom;
+  margin-top: 7%;
+  }
+  /*. Provide format to h2 by reference the first element h2 in the header - section  */
+header > section:first-of-type h2{
+  font-family: 'Arial Narrow';
+  font-size: 90%;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  height: 20%;
+  width: 100%;
+  color:  rgba(255,255,255,1);
+  grid-area: 2 / 2;
+  vertical-align: text-top;
+  margin-top: 1.5%;
+}
+
+/*. Provide format to h3 by reference the first element h3 in the header - section  */
+header > section:first-of-type h3{
+  font-family: 'Arial Narrow';
+  font-size: 80%;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  height: 40%;
+  width: 100%;
+  color:  rgba(220, 220, 220,1);
+  vertical-align: text-top;
+  grid-area: 3 / 2;
+  margin-top: 3%;
+  padding-top: 1%;
+  }
+}
+
+@media screen and (max-width:500px)
+{
+    
+  header > nav > ul
+  {
+    margin: 1%;
+    height: 0%;
+    display: grid;
+    grid-template-columns: 16% 13% 25% 15% auto;
+    grid-template-areas: 'empty1 area1 area2 area3 empty2';
+    grid-template-rows: auto;
+    align-content: center;
+    list-style-type: none;
+    text-decoration-line: none;
+    letter-spacing: 0.5px;
+  }
+    header > section:first-of-type h1{
+  font-family: 'helvetica';
+  font-size: 100%;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  height: 40%;
+  width: 100%;
+  color:  rgba(255,255,0,1);
+  align-content:unset;
+  grid-area: 1 / 2;
+  vertical-align: text-bottom;
+  margin-top: 7%;
+  }
+  /*. Provide format to h2 by reference the first element h2 in the header - section  */
+header > section:first-of-type h2{
+  font-family: 'Arial Narrow';
+  font-size: 80%;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  height: 20%;
+  width: 100%;
+  color:  rgba(255,255,255,1);
+  grid-area: 2 / 2;
+  vertical-align: text-top;
+  margin-top: 1.5%;
+}
+
+/*. Provide format to h3 by reference the first element h3 in the header - section  */
+header > section:first-of-type h3{
+  font-family: 'Arial Narrow';
+  font-size: 70%;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  height: 40%;
+  width: 100%;
+  color:  rgba(220, 220, 220,1);
+  vertical-align: text-top;
+  grid-area: 3 / 2;
+  margin-top: 3%;
+  padding-top: 1%;
+  }
+
+}
+
+
+/*
+
+References
+
+
+https://www.w3schools.com/css/css_grid_item.aspx
+
+https://developer.mozilla.org/es/docs/Web/CSS/:nth-of-type
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight
+
+https://www.w3schools.com/CSS/css_list.asp
+
+https://www.w3schools.com/css/css_font.asp
+
+https://www.fontsquirrel.com/fonts/archivo-narrow
+
+https://www.motocms.com/blog/en/online-font-recognition/
+
+https://coolors.co/image-picker
+
+https://www.w3schools.com/css/css_text_align.asp
+
+https://www.w3schools.com/Css/css_font_websafe.asp
+
+https://www.w3schools.com/cssref/pr_background-blend-mode.asp
+
+https://www.w3schools.com/css/css_image_transparency.asp
+
+https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_sidebar
+
+https://www.w3schools.com/Css/css_inline-block.asp
+
+https://www.w3schools.com/Css/css_boxmodel.asp
+
+https://www.freecodecamp.org/news/4-reasons-your-z-index-isnt-working-and-how-to-fix-it-coder-coder-6bc05f103e6c/
+
+*/
